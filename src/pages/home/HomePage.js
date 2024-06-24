@@ -1,24 +1,23 @@
-import React, { useContext } from 'react';
-import Loyout from '../../components/layout/Layout.js';
-import HeroSection from '../../components/heroSection/HeroSection.js';
-import Category from '../../components/category/Category.js';
-import HomePageProductCard from '../../components/homePageProductCard/HomePageProductCard.js';
-import Track from '../../components/track/Track.js';
-import Testimonial from '../../components/testimonial/Testimonial.js';
-import Loader from '../../components/loader/Loader.js';
+// src/pages/home/HomePage.js
 
-function Homepage() {
- 
+import React from 'react';
+import Layout from '../../components/layout/Layout';
+import HeroSection from '../../components/heroSection/HeroSection';
+import Category from '../../components/category/Category';
+import HomePageProductCard from '../../components/homePageProductCard/HomePageProductCard';
+import Track from '../../components/track/Track';
+import Testimonial from '../../components/testimonial/Testimonial';
+
+const HomePage = () => {
   return (
-    <Loyout>
-      <HeroSection/>
-      <Category/>
-      <HomePageProductCard/>
-      <Track/>
-      <Testimonial/>
-      <Loader/>
-    </Loyout>
-  )
+    <Layout>
+      <HeroSection />
+      <Category />
+      <HomePageProductCard />
+      <Track />
+      <Testimonial />
+    </Layout>
+  );
 }
 
-export default Homepage
+export default HomePage;

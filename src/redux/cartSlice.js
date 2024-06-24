@@ -3,7 +3,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 // Load initial state from localStorage or initialize as an empty array
-const initialState = JSON.parse(localStorage.getItem('cart')) || [];
+let initialState = [];
+const storedCart = localStorage.getItem('cart');
+
+if (storedCart) {
+  try {
+    initialState = JSON.parse(storedCart);
+  } catch (error) {
+    console.error('Error parsing cart data from localStorage:', error);
+    // Optionally handle the error, e.g., by clearing localStorage or setting a default value
+    localStorage.removeItem('cart'); // Clear invalid data
+  }
+}
 
 const cartSlice = createSlice({
   name: 'cart',

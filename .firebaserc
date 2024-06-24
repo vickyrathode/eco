@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "myecom-7f79a",
+    "hosting": "myecom-7f79a"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
